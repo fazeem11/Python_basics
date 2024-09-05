@@ -223,3 +223,39 @@ lst = [1, 2, 3, 4, 5]
 
 #     def area(self):
 #         return self.length * self.length
+
+
+# LOGIN page
+
+
+import tkinter as tk
+from tkinter import messagebox
+
+def login():
+    username = entry_username.get()
+    password = entry_password.get()
+    
+    # Replace with actual authentication logic
+    if username == "admin" and password == "password":
+        messagebox.showinfo("Login", "Login successful!")
+    else:
+        messagebox.showerror("Login", "Invalid username or password")
+app = tk.Tk()
+app.title("Login Page")
+
+# Create labels and entry widgets
+label_username = tk.Label(app, text="Username")
+label_username.pack(pady=5)
+entry_username = tk.Entry(app)
+entry_username.pack(pady=5)
+
+label_password = tk.Label(app, text="Password")
+label_password.pack(pady=5)
+entry_password = tk.Entry(app, show="*")
+entry_password.pack(pady=5)
+
+# Create login button
+button_login = tk.Button(app, text="Login", command=login)
+button_login.pack(pady=20)
+
+app.mainloop()

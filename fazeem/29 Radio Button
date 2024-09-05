@@ -1,0 +1,116 @@
+#           RADIO BUTTON
+
+# from tkinter import*
+
+# root=Tk()
+# root.title("pythonlobby")
+# value1=StringVar(root,"2")
+
+# rbtn1 = Radiobutton(root, text="Radio Button 1" ,variable =value1, value="1")
+# rbtn1.pack()
+# rbtn1 = Radiobutton(root, text="Radio Button 2" ,variable =value1, value="2")
+# rbtn1.pack()
+# rbtn1 = Radiobutton(root, text="Radio Button 3" ,variable =value1, value="3")
+# rbtn1.pack()
+
+# root.geometry("250x200")
+# mainloop()
+
+#           check button
+
+# from tkinter import*
+# root=Tk()
+# root.title("pythonLobby")
+# w=Label(root,text="pythonlobby.com",font="60")
+# w.pack()
+
+# checkbox1 = IntVar()
+# checkbox2 = IntVar()
+
+# Button0 = Checkbutton(root, text="Learning",
+#                     variable=checkbox1,
+#                     onvalue=1,
+#                     offvalue=0,
+#                     height=3,
+#                     width=12)
+
+# Button1 = Checkbutton(root,text="Tutorial",
+#                     variable=checkbox2,
+#                     onvalue=1,
+#                     offvalue=0,
+#                     height=3,
+#                     width=12)
+# Button0.pack()
+# Button1.pack()
+
+# root.geometry("1080x800")
+# mainloop()
+
+
+#        MESSAGE BOX
+
+
+# from tkinter import *
+
+# root=Tk()
+# def callback():
+#     text=textEditor.get(0.1,END)
+#     print(text)
+    
+# textEditor = Text(root,width=300,height=180,font="50")
+# textEditor.pack() 
+
+# button1= Button(root,text="Display TEXT",command =callback)
+# button1.pack(pady=12)
+
+# root.geometry('1080x800')
+# root.title("pythonLobby")
+# root.mainloop()
+
+
+#           SCROLL BAR
+
+# from tkinter import *
+# root =Tk()
+    
+# textbox = Text(root,width=100,height=40,font="50",wrap=WORD)
+# textbox.grid(row=0,column=0) 
+
+# scroll=Scrollbar(root, orient=VERTICAL,command=textbox.yview)
+# scroll.grid(row=0,column=1,sticky=N+S)
+# textbox.config(yscrollcommand=scroll.set)
+
+# root.geometry('1080x800')
+# root.title("pythonLobby")
+# root.mainloop()
+
+
+#           MENU BUTTON
+from tkinter import*
+root=Tk()
+root.geometry("500x300")
+w=Label(root,text="GeeksforGeeks",font = "50")
+w.pack()
+
+menubutton=Menubutton(root,text="Menu")
+
+menubutton.menu=Menu(menubutton)
+menubutton["menu"]=menubutton.menu
+
+var1=IntVar()
+var2=IntVar()
+var3=IntVar()
+
+menubutton.menu.add_checkbutton(label="courses",
+                                variable=var1)
+menubutton.menu.add_checkbutton(label="students",
+                                variable=var2)
+menubutton.menu.add_checkbutton(label="careers",
+                                variable=var3)
+menubutton.pack()
+root.mainloop()
+
+
+
+
+
